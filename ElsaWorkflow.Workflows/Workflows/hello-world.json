@@ -1,0 +1,136 @@
+{
+  "$id": "1",
+  "definitionId": "aca5885050b64e13924155bef7d66c10",
+  "versionId": "a62e3e8b76a649f591f2e28879c5b273",
+  "name": "HelloWorld",
+  "displayName": "Hello World",
+  "version": 1,
+  "variables": {
+    "$id": "2",
+    "data": {}
+  },
+  "customAttributes": {
+    "$id": "3",
+    "data": {}
+  },
+  "isSingleton": false,
+  "persistenceBehavior": "WorkflowBurst",
+  "deleteCompletedInstances": false,
+  "isPublished": true,
+  "isLatest": true,
+  "activities": [
+    {
+      "$id": "4",
+      "activityId": "8257b65b-4d8d-4d5b-8d31-3a72a3eea8f9",
+      "type": "HttpEndpoint",
+      "displayName": "HTTP Endpoint",
+      "persistWorkflow": false,
+      "loadWorkflowContext": false,
+      "saveWorkflowContext": false,
+      "properties": [
+        {
+          "$id": "5",
+          "name": "Path",
+          "expressions": {
+            "$id": "6",
+            "Literal": "/hello-world"
+          }
+        },
+        {
+          "$id": "7",
+          "name": "Methods",
+          "expressions": {
+            "$id": "8",
+            "Json": "[\"GET\"]"
+          }
+        },
+        {
+          "$id": "9",
+          "name": "ReadContent",
+          "expressions": {
+            "$id": "10"
+          }
+        },
+        {
+          "$id": "11",
+          "name": "TargetType",
+          "expressions": {
+            "$id": "12"
+          }
+        },
+        {
+          "$id": "13",
+          "name": "Authorize",
+          "expressions": {
+            "$id": "14"
+          }
+        },
+        {
+          "$id": "15",
+          "name": "Policy",
+          "expressions": {
+            "$id": "16"
+          }
+        }
+      ],
+      "propertyStorageProviders": {}
+    },
+    {
+      "$id": "17",
+      "activityId": "042e540e-6b7e-493b-af22-6cbc79e8f18d",
+      "type": "WriteHttpResponse",
+      "displayName": "HTTP Response",
+      "persistWorkflow": false,
+      "loadWorkflowContext": false,
+      "saveWorkflowContext": false,
+      "properties": [
+        {
+          "$id": "18",
+          "name": "Content",
+          "expressions": {
+            "$id": "19",
+            "Literal": "<h1>Hello World!</h1>"
+          }
+        },
+        {
+          "$id": "20",
+          "name": "ContentType",
+          "expressions": {
+            "$id": "21"
+          }
+        },
+        {
+          "$id": "22",
+          "name": "StatusCode",
+          "expressions": {
+            "$id": "23"
+          }
+        },
+        {
+          "$id": "24",
+          "name": "CharSet",
+          "expressions": {
+            "$id": "25"
+          }
+        },
+        {
+          "$id": "26",
+          "name": "ResponseHeaders",
+          "expressions": {
+            "$id": "27"
+          }
+        }
+      ],
+      "propertyStorageProviders": {}
+    }
+  ],
+  "connections": [
+    {
+      "$id": "28",
+      "sourceActivityId": "8257b65b-4d8d-4d5b-8d31-3a72a3eea8f9",
+      "targetActivityId": "042e540e-6b7e-493b-af22-6cbc79e8f18d",
+      "outcome": "Done"
+    }
+  ],
+  "id": "a62e3e8b76a649f591f2e28879c5b273"
+}

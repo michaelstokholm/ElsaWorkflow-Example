@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>e905f746-c162-4e96-817e-cbcc9e9fd53a</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Elsa.Activities.Email" Version="2.3.0" />
+    <PackageReference Include="Elsa.Activities.Http" Version="2.3.0" />
+    <PackageReference Include="Elsa.Persistence.EntityFramework.Sqlite" Version="2.3.0" />
+    <PackageReference Include="Elsa.Server.Api" Version="2.3.0" />
+    <PackageReference Include="Elsa.Server.Hangfire" Version="2.3.0" />
+    <PackageReference Include="Hangfire.AspNetCore" Version="1.7.25" />
+    <PackageReference Include="Hangfire.SQLite" Version="1.4.2" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.11.1" />
+    <PackageReference Include="Storage.Net" Version="9.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ElsaWorkflow.Core\ElsaWorkflow.Core.csproj" />
+    <ProjectReference Include="..\ElsaWorkflow.Persistence\ElsaWorkflow.Persistence.csproj" />
+    <ProjectReference Include="..\ElsaWorkflow.Workflows\ElsaWorkflow.Workflows.csproj" />
+  </ItemGroup>
+
+</Project>
